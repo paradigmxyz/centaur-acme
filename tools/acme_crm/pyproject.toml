@@ -3,6 +3,7 @@ name = "acme-crm"
 version = "0.1.0"
 description = "Example Centaur overlay CRM tool"
 requires-python = ">=3.11"
+license = "Apache-2.0 OR MIT"
 dependencies = ["click>=8.1.7"]
 
 [project.scripts]
