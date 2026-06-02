@@ -64,7 +64,9 @@ The template demonstrates the extension points an organization normally owns:
 .
 ├── .agents/skills/acme-support/     # sandbox skill loaded with the overlay
 ├── services/sandbox/SYSTEM_PROMPT.md
-├── tools/acme_crm/                  # toy CRM tool with sample data
+├── tools/acme_crm/                  # packaged Python CLI tool with sample data
+├── tools/acme_go/                   # minimal Go CLI tool
+├── tools/acme_rust/                 # minimal Rust CLI tool
 ├── workflows/daily_acme_brief.py    # example durable workflow
 ├── tests/
 └── Dockerfile                       # copies the overlay to /overlay
@@ -96,8 +98,9 @@ For the full GitOps example, pair this repo with
 
 ## Included examples
 
-`tools/acme_crm` is a toy CRM tool with no external credentials. It gives agents
-something organization-specific to discover and call.
+`tools/acme_crm` is a packaged Python CLI tool with no external credentials.
+`tools/acme_rust` and `tools/acme_go` are tiny compiled CLI examples that prove
+an overlay can ship source-built tools across the supported runtimes.
 
 `workflows/daily_acme_brief.py` is a minimal recurring workflow that asks an
 agent for a daily operating summary.
