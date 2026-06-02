@@ -39,3 +39,12 @@ def health_summary() -> dict[str, object]:
         "yellow_accounts": [account["name"] for account in accounts if account["health"] == "yellow"],
         "sample_data": True,
     }
+
+
+def support_playbook() -> dict[str, object]:
+    return {
+        "marker": "acme-live-overlay-2026-06-02",
+        "priority_levels": ["low", "medium", "high"],
+        "owner_action": "Send a concise account-owner next step after triage.",
+        "sample_data": True,
+    }

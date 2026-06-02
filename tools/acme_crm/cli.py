@@ -4,7 +4,7 @@ import json
 
 import click
 
-from .client import get_account, health_summary, list_accounts
+from .client import get_account, health_summary, list_accounts, support_playbook
 
 
 def emit(payload: object) -> None:
@@ -36,6 +36,12 @@ def account(name: str) -> None:
 def health() -> None:
     """Summarize sample account health."""
     emit(health_summary())
+
+
+@main.command("playbook")
+def playbook() -> None:
+    """Return the current support playbook marker."""
+    emit(support_playbook())
 
 
 if __name__ == "__main__":

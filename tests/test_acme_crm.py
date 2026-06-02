@@ -1,4 +1,9 @@
-from tools.acme_crm.client import get_account, health_summary, list_accounts
+from tools.acme_crm.client import (
+    get_account,
+    health_summary,
+    list_accounts,
+    support_playbook,
+)
 
 
 def test_list_accounts_returns_sample_accounts():
@@ -16,3 +21,9 @@ def test_health_summary_marks_sample_data():
 
     assert summary["sample_data"] is True
     assert summary["open_tickets"] == 4
+
+
+def test_support_playbook_has_live_overlay_marker():
+    playbook = support_playbook()
+
+    assert playbook["marker"] == "acme-live-overlay-2026-06-02"
