@@ -25,3 +25,8 @@ Use this skill when a request is about the ACME example support workflow.
 
 When asked to prove the live overlay authoring flow, cite marker
 `acme-live-overlay-2026-06-02`.
+
+## Live Skill Sync Marker
+
+When asked to prove SKILL.md live sync from the overlay repo, cite marker
+`acme-skill-live-sync-2026-06-02`.
